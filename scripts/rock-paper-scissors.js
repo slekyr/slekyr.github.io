@@ -101,7 +101,7 @@ function resetScore() {
 }
 
 function updateGraphics(playerChoice, computerChoice, result) {
-    jsChoices.innerHTML = `You <img class="move-icon" src="./images/${playerChoice}-emoji.png"> <img class="move-icon" src="./images/${computerChoice}-emoji.png"> Computer `;
+    jsChoices.innerHTML = `You <img class="move-icon" src="./images/rock-paper-scissors/${playerChoice}-emoji.png"> <img class="move-icon" src="./images/rock-paper-scissors/${computerChoice}-emoji.png"> Computer `;
 
     jsResult.innerHTML = `${result}`;
 
