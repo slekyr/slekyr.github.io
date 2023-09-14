@@ -10,8 +10,10 @@ body{
 }
 
 h1 {
+    width: 500px;
+    text-align: center;
     padding: 10px 0px;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 div {
@@ -20,7 +22,9 @@ div {
 }
 
 img {
-    height: 300px;
+    display: block;
+    width: 300px;
+    margin: auto;
 }
 
 button {
@@ -28,16 +32,26 @@ button {
     color: black;
     border: none;
     border-radius: 10px;
+    width: 120px;
     font-size: larger;
     font-weight: bold;
-    padding: 10px 20px;
-    margin: 10px 20px;
+    padding: 10px 0px;
+    margin: 20px 14px;
     cursor: pointer;
 }
 
 button:active {
     background-color: black;
     color: white;
-    border: 2px solid white;
-    padding: 8px 18px;
+    border: 2px solid white;}
+
+.buttons {
+    display: block;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.magic-image {
+    height: 300px;
 }
