@@ -1,5 +1,6 @@
 const magicEightBallImage = document.querySelector(".js-magic-image");
 const shakeBallBtn = document.querySelector(".js-shake-ball-btn");
+const resetBallBtn = document.querySelector(".js-reset-ball-btn");
 
 function getRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 20 );
@@ -90,6 +91,9 @@ function getMagicAnswer() {
 }
 
 shakeBallBtn.addEventListener("click", function() {
-    console.log("button clicked");
     getMagicAnswer();
+})
+
+resetBallBtn.addEventListener("click", function() {
+    magicEightBallImage.innerHTML = `<img src="./images/magic-eight-ball/magic-eight-ball-logo.png"></img>`;
 })
