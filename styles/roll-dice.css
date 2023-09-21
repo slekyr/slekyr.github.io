@@ -1,0 +1,38 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    touch-action: manipulation;
+}
+
+.dice-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 310px;
+}
+
+.dice-img {
+    height: 100px;
+}
+
+.roll-dice-btn {
+    display: block;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 20px 0px;
+}
+
+.dice-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 4px 8px;
+    margin: 0px 4px;
+}
