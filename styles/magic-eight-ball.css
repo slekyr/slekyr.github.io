@@ -2,18 +2,49 @@
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
 }
 
 body{
     touch-action: manipulation;
 }
 
-img {
-    width: 300px;
+.background, .title, .magic-image, .buttons {
+    display: flex;
+}
+
+.background {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90vh;
+}
+
+.title h1 {
+    width: 90vw;
+    max-width: 400px;
+    text-align: center;
+}
+
+.magic-image {
+    width: 90vw;
+    max-width: 400px;
+}
+
+.magic-image img {
+    width: 90vw;
+    max-width: 400px;
     margin: auto;
 }
 
-button {
+.buttons {
+    justify-content: center;
+    width: 100vw;
+    max-width: 400px;
+}
+
+.buttons button {
     background-color: white;
     color: black;
     border: none;
@@ -21,15 +52,11 @@ button {
     font-size: larger;
     font-weight: bold;
     padding: 10px 16px;
+    margin: auto;
     cursor: pointer;
 }
 
 button:active {
     background-color: black;
     color: white;
-    border: 2px solid white;}
-
-.magic-image {
-    height: 300px;
-    margin-bottom: 26px;
 }
