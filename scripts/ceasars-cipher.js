@@ -3,13 +3,26 @@ const alphabetUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L
 
 const submitButton = document.querySelector(".submit-btn");
 const decodeButton = document.querySelector(".decode-btn");
+
 const secretMessageDisplay = document.querySelector("#secret-message");
 const messageDisplay = document.querySelector("#message");
+
+const numberSliderDisplay = document.querySelector("#number-slider");
+const cipherNumberDisplay = document.querySelector(".cipher-number");
 
 let message = "";
 let messageArray;
 let secretMessage = "";
 let secretMessageArray;
+let cipherNumber;
+
+cipherNumberDisplay.innerHTML = numberSliderDisplay.value;
+
+numberSliderDisplay.addEventListener("input", () => {
+    cipherNumberDisplay.innerHTML = numberSliderDisplay.value;
+    cipherNumber = Number(numberSliderDisplay.value);
+    return cipherNumber;
+})
 
 function createSecretMessage() {
     message = document.querySelector("#message").value;
@@ -26,7 +39,7 @@ function createSecretMessage() {
             const alphaLowChar  = alphabetLower[j];
     
             if (messageChar === alphaLowChar) {
-                secretMessage += alphabetLower[(j + 3) % 26];
+                secretMessage += alphabetLower[(j + cipherNumber) % 26];
             }
         }
     
@@ -34,7 +47,7 @@ function createSecretMessage() {
             const alphabetUpChar  = alphabetUpper[k];
     
             if (messageChar === alphabetUpChar) {
-                secretMessage += alphabetUpper[(k + 3) % 26];
+                secretMessage += alphabetUpper[(k + cipherNumber) % 26];
             }
         }
     }
@@ -62,7 +75,7 @@ function decodeSecretMessage() {
             const alphaLowChar  = alphabetLower[j];
     
             if (secretMessageChar === alphaLowChar) {
-                message += alphabetLower[(j - 3 + 26) % 26];
+                message += alphabetLower[(j - cipherNumber + 26) % 26];
             }
         }
     
@@ -70,7 +83,7 @@ function decodeSecretMessage() {
             const alphabetUpChar  = alphabetUpper[k];
     
             if (secretMessageChar === alphabetUpChar) {
-                message += alphabetUpper[(k - 3 + 26) % 26];
+                message += alphabetUpper[(k - cipherNumber + 26) % 26];
             }
         }
     }
