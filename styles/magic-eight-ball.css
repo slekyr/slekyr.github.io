@@ -7,7 +7,6 @@
 
 body{
     touch-action: manipulation;
-    overscroll-behavior: none;
 }
 
 .background, .title, .magic-image, .buttons {
